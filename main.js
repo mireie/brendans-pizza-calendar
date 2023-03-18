@@ -14,7 +14,7 @@ alert(`If you have pizza once per week, you have ${additionalPizzas} more pizzas
 }
 
 async function getLifespan(country) {
-  const response = await fetch(`http://api.worldbank.org/v2/country/${country}/indicator/SP.DYN.LE00.IN?format=json&date=2020`);
+  const response = await fetch(`https://api.worldbank.org/v2/country/${country}/indicator/SP.DYN.LE00.IN?format=json&date=2020`);
   const data = await response.json();
   return parseInt(data[1][0]['value']);
 }
